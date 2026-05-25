@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+  api.versionsFrom('METEOR@3.4');
 
   api.use('underscore');
   api.use('tracker'); // reactivity
@@ -17,7 +17,7 @@ Package.onUse(function (api) {
   api.imply('iron:core');
 
   api.use('iron:layout@1.0.12');
-  api.use('iron:dynamic-template@1.1.0');
+  api.use('iron:dynamic-template@2.0.0');
 
   api.addFiles('lib/wait_list.js', 'client');
   api.addFiles('lib/controller.js');
@@ -26,6 +26,7 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function (api) {
+  api.versionsFrom('METEOR@3.4');
   api.use('iron:controller');
   api.use('iron:layout');
   api.use('tinytest');
